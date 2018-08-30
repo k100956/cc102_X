@@ -1,0 +1,10 @@
+version: '3'
+services:
+  jupyter-tutorial:
+    image: k100956/base-notebook:1
+    container_name: weiren
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/test3/work/
+    command: start-notebook.sh --NotebookApp.token=''
